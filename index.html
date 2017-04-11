@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>SM35 Generator - Passwortänderungen</title>
+	<link rel="stylesheet" href="andreas.css">
+	<script src="andreas.js" async></script>
+  </head>
+  <body>
+    <h1>SM35 Generator - Passwortänderungen</h1>
+    <!-- All of the Node.js APIs are available in this renderer process. -->
+	
+	<div>
+		<label for="newPWField">Neues Passwort:
+			<input id="newPWField" name="newPWField">
+		</label>
+	</div>
+	<div>
+		  <label for="userListFiled">Liste der Benutzer</label>
+		  <textarea id="userListFiled">Benutzer01
+Benutzer02
+Benutzer03
+		  </textarea>
+	</div>
+	<div>
+		<button onclick="generieren()">SM35 Generieren</button> 
+	</div>
+	<div>
+		  <label for="exportField">Export für SM35</label>
+		  <textarea id="exportField"></textarea>
+	</div>
+	
+		<table>
+		  <tr>
+			<th>Komponente</th>
+			<th>Version</th>
+		   </tr>
+		  <tr>
+		  <tr>
+			<td>Node.js</td>
+			<td><script>document.write(process.versions.node)</script></td>
+		   </tr>
+		  <tr>
+			<td>Chromium</td>
+			<td><script>document.write(process.versions.chrome)</script></td>
+		   </tr>
+		  <tr>
+			<td>Electron</td>
+			<td><script>document.write(process.versions.electron)</script></td>
+		   </tr>
+		</table>
+  </body>
+
+  <script>  
+    // You can also require other files to run in this process
+    require('./renderer.js');
+  </script>
+</html>

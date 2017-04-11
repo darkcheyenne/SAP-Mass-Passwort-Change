@@ -1,0 +1,24 @@
+{
+  "name": "SM35 Generator - Passwortänderungen",
+  "version": "1.0.0",
+  "description": "Einfache Massen-Passwortänderung in SAP-Systemen mit ZBV",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": "https://github.com/electron/electron-quick-start",
+  "keywords": [
+    "SAP",
+    "SM35",
+    "Benutzerstamm",
+    "Passwort",
+    "Passwortänderung",
+	"ZBV",
+	"Zentrale Benutzerverwaltung"
+  ],
+  "author": "Andreas Eberli",
+  "license": "BSD-2-Clause",
+  "devDependencies": {
+    "electron": "~1.6.2"
+  }
+}
