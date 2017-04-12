@@ -1,7 +1,7 @@
 {
-  "name": "SM35 Generator - Passwortänderungen",
+  "name": "SM35_Massen_Passwortaenderungen",
   "version": "1.0.0",
-  "description": "Einfache Massen-Passwortänderung in SAP-Systemen mit ZBV",
+  "description": "Einfache Massen-Passwortaenderung in SAP-Systemen mit ZBV",
   "main": "main.js",
   "scripts": {
     "start": "electron ."
