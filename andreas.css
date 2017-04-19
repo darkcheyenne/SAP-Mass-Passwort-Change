@@ -1,3 +1,36 @@
 #exportField {
-width: 80%; min-height: 250px; margin: 0 0 10% 10%; padding: 5px;
+min-width: 500px; width: auto; min-height: 350px; margin: 0; padding: 0;border:1pt solid grey;
+font-size: 10px;
+}
+#newPWField, #userListFiled {
+	min-width: 500px; width: auto; padding: 5px 5px 5px 5px; margin: 0; border:1pt solid grey;
+}
+#menuDiv {
+	width: 200px;
+	float: left;
+}
+
+#contentDiv {
+	width: auto;
+	float: left;
+	margin: 20px;
+}
+.noDisplayOnStart {
+	display:none
+}
+label {
+	width: 120px;
+	display: inline-block;
+}
+.sapFieldTblStyleRowBase {
+	border:1pt solid transparent; margin: 0; padding: 0;
+}
+.sapFieldTblStyleRowOne {
+	border-bottom:1pt solid grey;
+	margin-bottom: 5px;
+	margin: 0;
+	padding: 0;
+}
+.sapFieldTblStyleRowTwo {
+	margin: 0; padding: 0;
 }

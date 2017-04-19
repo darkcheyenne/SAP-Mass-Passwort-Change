@@ -3,39 +3,43 @@
   <head>
     <meta charset="UTF-8">
     <title>SM35 Generator - Passwortänderungen</title>
+	<link rel="stylesheet" href="global.css">
+	<link rel="stylesheet" href="google_buttons.css">
 	<link rel="stylesheet" href="andreas.css">
 	<script src="andreas.js" async></script>
   </head>
   <body>
+  <div id="contentDiv">
     <h1>SM35 Generator - Passwortänderungen</h1>
     <!-- All of the Node.js APIs are available in this renderer process. -->
 	
-	<div>
-		<label for="newPWField">Neues Passwort:
-			<input id="newPWField" name="newPWField">
-		</label>
-	</div>
-	<div>
-		  <label for="userListFiled">Liste der Benutzer</label>
-		  <textarea id="userListFiled">Benutzer01
+	<table id="inputTableDiv">
+		  <tr class="sapFieldTblStyleRowBase">
+			<td class="sapFieldTblStyleRowOne"><label for="newPWField">Neues Passwort</label></th>
+			<td class="sapFieldTblStyleRowTwo"><input id="newPWField" name="newPWField" oninput="inputSanityCheck()"></th>
+		   </tr>
+		  <tr class="sapFieldTblStyleRowBase">
+			<td class="sapFieldTblStyleRowOne"><label for="userListFiled">Liste der Benutzer</label></td>
+			<td class="sapFieldTblStyleRowTwo"><textarea rows="10" id="userListFiled" oninput="inputSanityCheck()">Benutzer01
 Benutzer02
-Benutzer03
-		  </textarea>
+Benutzer03</textarea></td>
+		   </tr>
+	</table>
+	<div class="noDisplayOnStart" id="genButtonDiv">
+		<button onclick="generieren()" class="button default blue">SM35 Generieren</button> 
 	</div>
-	<div>
-		<button onclick="generieren()">SM35 Generieren</button> 
-	</div>
-	<div>
-		  <label for="exportField">Export für SM35</label>
-		  <textarea id="exportField"></textarea>
-	</div>
-	
+	<table class="noDisplayOnStart" id="outputAreaDiv">
+		  <tr class="sapFieldTblStyleRowBase">
+			<td class="sapFieldTblStyleRowOne"><label for="exportField">Export für SM35</label></th>
+			<td class="sapFieldTblStyleRowTwo"><textarea id="exportField"></textarea></th>
+		   </tr>
+	</table>
+	<div class="noDisplayOnStart">
 		<table>
 		  <tr>
 			<th>Komponente</th>
 			<th>Version</th>
 		   </tr>
-		  <tr>
 		  <tr>
 			<td>Node.js</td>
 			<td><script>document.write(process.versions.node)</script></td>
@@ -49,6 +53,7 @@ Benutzer03
 			<td><script>document.write(process.versions.electron)</script></td>
 		   </tr>
 		</table>
+	</div>
   </body>
 
   <script>  

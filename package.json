@@ -13,12 +13,14 @@
     "Benutzerstamm",
     "Passwort",
     "Passwortänderung",
-	"ZBV",
-	"Zentrale Benutzerverwaltung"
+    "ZBV",
+    "Zentrale Benutzerverwaltung"
   ],
   "author": "Andreas Eberli",
   "license": "BSD-2-Clause",
   "devDependencies": {
-    "electron": "~1.6.2"
+    "electron": "~1.6.2",
+    "electron-package": "^0.1.0",
+    "electron-packager": "^8.6.0"
   }
 }
