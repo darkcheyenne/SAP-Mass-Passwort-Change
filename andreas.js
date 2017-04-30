@@ -16,9 +16,10 @@
 			addToExportField("\t" + "0000" + "\t" + "\t" + "G_PASSWORD1" + "\t" + document.getElementById('newPWField').value);
 			addToExportField("\t" + "0000" + "\t" + "\t" + "G_PASSWORD2" + "\t" + document.getElementById('newPWField').value);
 		}
-		document.getElementById('inputTableDiv').style.display = "none"
-		document.getElementById('genButtonDiv').style.display = "none"
-		document.getElementById('outputAreaDiv').style.display = "initial"
+		document.getElementById('inputTableDiv').style.display = "none";
+		document.getElementById('genButtonDiv').style.display = "none";
+		document.getElementById('outputAreaDiv').style.display = "initial";
+		document.getElementById('resetButtonDiv').style.display = "initial";
 	 }
 	 
 	function addToExportField(newLineText) {
@@ -27,6 +28,11 @@
 		textValue += newLineText + "\n";
 		field.value = textValue;
 	}
+	function clearExportField() {
+		var field = document.getElementById('exportField');
+		var textValue = field.value;
+		field.value = "";
+	}
 	
 	function inputSanityCheck() {
 		var field1 = document.getElementById('newPWField');
@@ -34,8 +40,21 @@
 		var textValue1 = field1.value;
 		var textValue2 = field2.value;
 		
-	if (field1!=null || field1!="",field2!=null || field2!="")
+	if (textValue1!="")
 	  {
-		  document.getElementById('genButtonDiv').style.display = "initial"
+		  if (textValue2!=""){
+				document.getElementById('genButtonDiv').style.display = "initial";
+		  }else {
+			  document.getElementById('genButtonDiv').style.display = "none";
+		  }
+	  } else {
+		document.getElementById('genButtonDiv').style.display = "none";
 	  }
+	}
+	function resetAll() {
+		document.getElementById('inputTableDiv').style.display = "initial";
+		inputSanityCheck();
+		clearExportField();
+		document.getElementById('outputAreaDiv').style.display = "none";
+		document.getElementById('resetButtonDiv').style.display = "none";
 	}
