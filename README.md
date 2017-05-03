@@ -1,6 +1,6 @@
 # SM35 Generator - Passwortänderungen
-## Download
-[Windows](https://www.dropbox.com/s/1jqh34f4dtdnxh7/SM35_Massen_Passwortaenderungen-win32-x64.zip?dl=0)
+## Download (Ohne Installation)
+[Windows](https://www.eberli.me/wp-content/uploads/2017/04/SM35_Massen_Passwortaenderungen-win32-x64.zip)
 ## Schritt 1
 Eingeben des neuen Passworts für ALLE Benutzer die bei Schritt 2 angegeben werden:
 ![Passworteingabe Feld](docu/IMG_PWEINGABE.png)
