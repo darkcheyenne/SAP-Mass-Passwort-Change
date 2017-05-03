@@ -1,21 +1,21 @@
-# SM35 Generator - Passwort�nderungen
+# SM35 Generator - Passwortänderungen
 ## Download
 [Windows](https://www.dropbox.com/s/1jqh34f4dtdnxh7/SM35_Massen_Passwortaenderungen-win32-x64.zip?dl=0)
 ## Schritt 1
-Eingeben des neuen Passworts f�r ALLE Benutzer die bei Schritt 2 angegeben werden:
+Eingeben des neuen Passworts für ALLE Benutzer die bei Schritt 2 angegeben werden:
 ![Passworteingabe Feld](docu/IMG_PWEINGABE.png)
 
 ## Schritt 2
-![Einf�gen der Benutzerliste](docu/IMG_BENUTZERLISTE.png)
+![Einfügen der Benutzerliste](docu/IMG_BENUTZERLISTE.png)
 
 ## Schritt 3
 ![Generieren](docu/IMG_KLICHGEN.png)
 
 ## Schritt 4 
-![Notepad �ffnen](docu/IMG_EDITOR.png)
+![Notepad Öffnen](docu/IMG_EDITOR.png)
 
 ## Schritt 5 
-![Notepad �ffnen](docu/IMG_COMPYTONOTEPAD.png)
+![Notepad Öffnen](docu/IMG_COMPYTONOTEPAD.png)
 
 ## Schritt 6 
 ![Speichern unter](docu/IMG_SAVEAS.png)
