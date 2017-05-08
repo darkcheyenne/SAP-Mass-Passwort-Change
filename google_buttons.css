@@ -19,6 +19,8 @@
 	text-decoration: none;
 	width: 80%;
 	margin: 15px 0 10% 10%;
+	max-width: 503px;
+	margin-left: 123px;
 }
 
 .button:hover {
