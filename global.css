@@ -57,7 +57,10 @@ h3 {
 
 #userListFiled, #exportField {
   font-family: 'Source Code Pro', monospace;
-  color: hsl(0,0%,36%);
   background-color: hsla(0,0%,60%,.15);
   resize: none;
+}
+
+.newPWField {
+  font-family: 'Source Code Pro', monospace;
 }
