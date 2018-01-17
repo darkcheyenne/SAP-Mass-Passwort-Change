@@ -6,7 +6,15 @@
 	<link rel="stylesheet" href="global.css">
 	<link rel="stylesheet" href="google_buttons.css">
 	<link rel="stylesheet" href="andreas.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+ 	<script src="FileSaver.min.js" async></script>
 	<script src="andreas.js" async></script>
+  <script>
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('service-worker.js');
+}
+  </script>
+
   </head>
   <body>
   <div id="contentDiv">
@@ -15,8 +23,8 @@
 	
 	<table id="inputTableDiv">
 		  <tr class="sapFieldTblStyleRowBase">
-			<td class="sapFieldTblStyleRowOne"><label for="newPWField">Neues Passwort</label></th>
-			<td class="sapFieldTblStyleRowTwo"><input id="newPWField" name="newPWField" oninput="inputSanityCheck()"></th>
+			<th class="sapFieldTblStyleRowOne"><label for="newPWField">Neues Passwort</label></th>
+			<th class="sapFieldTblStyleRowTwo"><input id="newPWField" name="newPWField" oninput="inputSanityCheck()"></th>
 		   </tr>
 		  <tr class="sapFieldTblStyleRowBase">
 			<td class="sapFieldTblStyleRowOne"><label for="userListFiled">Liste der Benutzer</label></td>
@@ -30,37 +38,17 @@ Benutzer03</textarea></td>
 	</div>
 	<table class="noDisplayOnStart" id="outputAreaDiv">
 		  <tr class="sapFieldTblStyleRowBase">
-			<td class="sapFieldTblStyleRowOne"><label for="exportField">Export für SM35</label></th>
-			<td class="sapFieldTblStyleRowTwo"><textarea id="exportField"></textarea></th>
+			<th class="sapFieldTblStyleRowOne"><label for="exportField">Export für SM35</label></th>
+			<th class="sapFieldTblStyleRowTwo"><textarea id="exportField"></textarea></th>
 		   </tr>
 	</table>
+<div class="noDisplayOnStart" id="saveButtonDiv">
+                <button id="btn-save" class="button default blue">Speichern</button>
+        </div>
+
 	<div class="noDisplayOnStart" id="resetButtonDiv">
 		<button onclick="resetAll()" class="button default blue">Neues Script erstellen</button> 
 	</div>
-	<div class="noDisplayOnStart">
-		<table>
-		  <tr>
-			<th>Komponente</th>
-			<th>Version</th>
-		   </tr>
-		  <tr>
-			<td>Node.js</td>
-			<td><script>document.write(process.versions.node)</script></td>
-		   </tr>
-		  <tr>
-			<td>Chromium</td>
-			<td><script>document.write(process.versions.chrome)</script></td>
-		   </tr>
-		  <tr>
-			<td>Electron</td>
-			<td><script>document.write(process.versions.electron)</script></td>
-		   </tr>
-		</table>
-	</div>
+</div>
   </body>
-
-  <script>  
-    // You can also require other files to run in this process
-    require('./renderer.js');
-  </script>
 </html>

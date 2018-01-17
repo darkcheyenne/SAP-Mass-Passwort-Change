@@ -2,7 +2,9 @@
 		var lines = document.getElementById('userListFiled').value.split('\n');
 		for(var i = 0;i < lines.length;i++){
 			//code here using lines[i] which will give you each line
-			addToExportField("\t" + "0000" + "\t" + "T" + "\t" + "SU01");
+			//addToExportField("\t" + "0000" + "\t" + "T" + "\t" + "SU01");
+addToExportField("\t" + "0000" + "\t" + "M" + "\t" + "SU01" + "\t" + "U217646" + "\t" + "17012018" + "\t" + "121811");
+addToExportField("\t" + "0000" + "\t" + "T" + "\t" + "SU01" + "\t" + "BS" + "\t" + "AA" + "\t" + "X" + "\t" + "F");
 			addToExportField("SAPLSUU5" + "\t" + "0050	X");
 			addToExportField("\t" + "0000" + "\t" + "\t" + "BDC_CURSOR" + "\t" + "USR02-BNAME");
 			addToExportField("\t" + "0000" + "\t" + "\t" + "BDC_OKCODE" + "\t" + "=PASS");
@@ -18,8 +20,9 @@
 		}
 		document.getElementById('inputTableDiv').style.display = "none";
 		document.getElementById('genButtonDiv').style.display = "none";
-		document.getElementById('outputAreaDiv').style.display = "initial";
-		document.getElementById('resetButtonDiv').style.display = "initial";
+		document.getElementById('outputAreaDiv').style.display = "block";
+		document.getElementById('resetButtonDiv').style.display = "block";
+document.getElementById('saveButtonDiv').style.display = "block";
 	 }
 	 
 	function addToExportField(newLineText) {
@@ -43,7 +46,7 @@
 	if (textValue1!="")
 	  {
 		  if (textValue2!=""){
-				document.getElementById('genButtonDiv').style.display = "initial";
+				document.getElementById('genButtonDiv').style.display = "block";
 		  }else {
 			  document.getElementById('genButtonDiv').style.display = "none";
 		  }
@@ -52,9 +55,17 @@
 	  }
 	}
 	function resetAll() {
-		document.getElementById('inputTableDiv').style.display = "initial";
+		document.getElementById('inputTableDiv').style.display = "block";
 		inputSanityCheck();
 		clearExportField();
 		document.getElementById('outputAreaDiv').style.display = "none";
 		document.getElementById('resetButtonDiv').style.display = "none";
+document.getElementById('saveButtonDiv').style.display = "none";
 	}
+
+$("#btn-save").click( function() {
+  var text = $("#exportField").val();
+  var filename = "Export_For_SM35.txt";
+  var blob = new Blob([text], {type: "text/plain;charset=utf-8"});
+  saveAs(blob, filename+".txt");
+});
