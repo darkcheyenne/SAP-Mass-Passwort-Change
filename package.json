@@ -19,7 +19,7 @@
   "author": "Andreas Eberli",
   "license": "BSD-2-Clause",
   "devDependencies": {
-    "electron": "^1.6.2",
+    "electron": "^9.1.0",
     "electron-package": "^0.1.0",
     "electron-packager": "^8.7.0"
   }
